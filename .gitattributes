@@ -1,0 +1,6 @@
+*.onxx filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+optus-mt-zh-en-onnx/decoder_model_merged.onnx filter=lfs diff=lfs merge=lfs -text
+optus-mt-zh-en-onnx/decoder_with_past_model.onnx filter=lfs diff=lfs merge=lfs -text
+optus-mt-zh-en-onnx/encoder_model.onnx filter=lfs diff=lfs merge=lfs -text
+optus-mt-zh-en-onnx/decoder_model.onnx filter=lfs diff=lfs merge=lfs -text
