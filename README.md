@@ -25,6 +25,6 @@ OnnxRuntime
 ```bash
 optimum-cli onnxruntime quantize \
   --avx512 \
-  --onnx_model optus-mt-zh-en-onnx \
-  -o quantized_optus-mt-zh-en-onnx
+  --onnx_model bert-tiny-onnx \
+  -o quantized_bert-tiny-onnx
 ```
