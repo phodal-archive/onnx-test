@@ -13,10 +13,8 @@ const TOP_K: usize = 5;
 fn main() -> OrtResult<()> {
     tracing_subscriber::fmt::init();
 
-    // refs to: https://github.com/guillaume-be/rust-bert/blob/main/src/models/marian/marian_model.rs#L106
-    let model_dir = Path::new(env!("CARGO_MANIFEST_DIR")).parent()
-        .unwrap()
-        .join("quantized_optus-mt-zh-en-onnx");
+    let model_dir = Path::new(env!("CARGO_MANIFEST_DIR"))
+        .join("quantized_bert-tiny-onnx");
 
     let mut stdout = io::stdout();
     let mut rng = rand::thread_rng();
@@ -31,7 +29,7 @@ fn main() -> OrtResult<()> {
     let session = SessionBuilder::new(&environment)?
         .with_optimization_level(GraphOptimizationLevel::Level3)?
         .with_intra_threads(1)?
-        .with_model_from_file(model_dir.join("encoder_model.onnx"))
+        .with_model_from_file(model_dir.join("model_quantized.onnx"))
         .unwrap();
 
     // let tokenizer = Tokenizer::from_file(model_dir.join("vocab.json")).unwrap();
