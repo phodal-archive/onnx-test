@@ -22,7 +22,7 @@ optimum-cli export onnx -m Helsinki-NLP/opus-mt-zh-en --optimize O2 optus-mt-zh-
 
 OnnxRuntime
 
-```
+```bash
 optimum-cli onnxruntime quantize \
   --avx512 \
   --onnx_model optus-mt-zh-en-onnx \
