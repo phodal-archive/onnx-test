@@ -11,7 +11,7 @@ pip install optimum[exporters,onnxruntime]
 2.convert onnx
 
 ```bash
-optimum-cli export onnx --model Helsinki-NLP/opus-mt-zh-en optus-mt-zh-en-onnx
+optimum-cli export onnx --model sentence-transformers/all-MiniLM-L6-v2 all-MiniLM-L6-v2-onnx
 ```
 
 ## Better example
